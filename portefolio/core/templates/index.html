@@ -1,0 +1,447 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Branco Portfolio's</title>
+    <!-- ICONSCOUT CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+
+    <!-- GOOGLE FONTS (POPPINS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLESHEET -->
+
+
+
+   
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <nav style="background-color: rgb(30,30,30); z-index: 9;">
+      <div class="container nav__container" >
+        <a href="/" class="nav__logo" >
+          <h3 style="color: rgb(144, 52, 214);">João Branco</h3>
+        </a>
+
+        <ul class="nav__menu">
+          <li><a  style="color: #fff;" href="#initial" >HOME</a></li>
+          <li style="color: #fff;"><a style="color: #fff;" href="#skills">SKILLS</a></li>
+          <li style="color: #fff;"><a  style="color: #fff;" href="#portfolio">PROJECTS</a></li>
+          <li style="color: #fff;"><a style="color: #fff;" href="#contact">CONTACT</a></li>
+          <!--<li style="color: #fff;"><a style="color: #fff;" href="{% url 'chat' %}">AI ASSISTENT</a></li><p>Comming Soon!</p>-->
+          <li >
+            <a href="{% static 'CV_JoaoBranco.pdf'%}" class="btn btn-primary "style="color: white;" download
+              ><i class="uil uil-download-alt"></i> Download CV</a
+            >
+          </li>
+        </ul>
+
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+      </div>
+    </nav>
+    <!--================== END OF NAVBAR =================-->
+    <div>
+      <div class="oi">
+          <div class="opening">
+              <h1 style="margin-top: 50%;"><span style="color:rgb(109,150,179)">print</span ><span style="color:rgb(148, 128, 98)">(</span><span style="color:rgb(89, 107, 69)">"Hello World"</span><span style="color:rgb(148, 128, 98)">)</span></h1>
+              <p class="subtitle" style="color: rgb(218, 206, 188);"><br><br>Hi my name is João<br>Scroll Down</p>
+              <section id="section10" class="demo" >
+                <a href="#initial" ><span></span></a>
+              </section>
+          </div>
+          
+      </div>
+      
+  </div>
+  
+  <style>
+  @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+
+
+section::after {
+  position: absolute;
+  
+  content: '';
+  
+  
+}
+
+.demo a {
+  position: absolute;
+ 
+ 
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+
+#section10 a span {
+  position: fixed;
+  top: 0;
+  
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#section10 a span::before {
+  position: absolute;
+  top: 10px;
+
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+  
+  :root {
+    --bg-color: rgb(30,30,30);
+    --typewriterSpeed: 3s;
+    --typewriterCharacters: 24;
+  }
+  
+  .oi .opening {
+    margin:0;
+    
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+  }
+  
+  .oi .opening h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width:auto;
+  }
+  
+  .oi .opening h1::before,
+  .oi .opening h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .oi .opening h1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  .oi .opening h1::after {
+    width: 0.1em;
+    background: rgb(30,30,30);
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards,
+      blink 770ms steps(var(--typewriterCharacters)) infinite;
+  
+  }
+  
+  .oi .opening .subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(-4rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  }
+  
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: rgb(148, 128, 98);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }</style>
+    <header id="initial">
+      <div class="container header__container">
+        <div class="header__left" id="introduction">
+          <div>
+            <h3>Hello There! I'm</h3>
+            <h1>João<br />Branco</h1>
+            <p>
+              I'm currently studying Computer Science at ISCTE.<br>
+              Skilled in Python, Java, WebDev and more...<br>
+              Scroll down to get to know me better!
+            </p>
+            <a href="#contact" class="btn btn-primary btn-lg">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="header__right">
+          <div class="header__image">
+            <img src="{% static 'media/foto1.png' %}" style="size: 90%;" />
+          </div>
+          <div class="header__right-bg"></div>
+          <ul class="header__socials">
+            <li>
+              <a href="https://instagram.com/joao.dfb3" target="_blank"
+                ><i class="uil uil-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/jo%C3%A3o-branco-284567200/" target="_blank"
+                ><i class="uil uil-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/fibonacci555" target="_blank"><i class="uil uil-github"></i></a>
+              </li>
+            
+           
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--================== END OF HEADER =================-->
+    <link rel="stylesheet" href="{% static 'bars.css'%}">
+    
+      <br><br>
+      <section id="skills" >
+    </section>
+    <!--================== END OF COMPANIES =================-->
+   
+    <section id="skillss" style="font-family: 'Source Code Pro', monospace;">
+      
+      <div class="skill" style="background-color: #fff; background-image: none;opacity: 1; "><h1>My Skills</h1>
+        <li><h3>Python </h3>
+          <span class="bar" data-width="80%"><span class="Python"> </span></span>
+        </li>
+        <li><h3>Java </h3>
+          <span class="bar" data-width="73%"><span class="Java"> </span></span>
+        </li>
+        <li><h3>C</h3>
+        <span class="bar" data-width="65%"><span class="C"> </span></span>
+        </li>
+        <li><h3>C++</h3>
+          <span class="bar" data-width="55%"><span class="Cplus"> </span></span>
+        </li>
+        <li><h3>Web Dev</h3>
+          <span class="bar" data-width="76%"><span class="WebDev"> </span></span>
+        </li>
+      </div>
+      
+    </section>
+    <!--================== END OF SERVICES =================-->
+
+    <section id="portfolio">
+      <div class="container portfolio__container">
+        <div class="portfolio__head">
+          <div class="vl"></div>
+          <h1 style="align-self: center; margin: auto;">My Projects</h1>
+          <div class="portfolio__head-right">
+            <p>
+              In this section of my portfolio, you will find a selection of my most recent and significant projects. 
+              Each project showcases my technical abilities, problem-solving skills, and attention to detail. 
+              I have included a brief description, screenshots, and a link to the live demo or codebase, so you can see my work in action. 
+              I invite you to take a look and get a sense of the quality and diversity of my work. 
+              I am confident that my projects demonstrate my passion for creating efficient and user-friendly solutions. 
+              Enjoy!
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="portfolio__projects">
+        {% for project in projects %}
+          <article class="portfolio__project">
+            <h2>{{ project.name }}</h2>
+            <h4>{{ project.subname}}</h4>
+            {% if project.body != None %}<p>{{ project.body }}</p>{% endif %}
+            <span class="portfolio__project-image"
+              ><img src="static/media/{{ project.pic }}">
+            </span>
+            <div class="portfolio__cta">
+              <a href="{{ project.github }}" class="btn" target="_blank"
+                >Github</a>
+              
+                {% if project.link != None %}
+                <a
+                href="{{ project.link }}"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >Go To</a>
+                {% endif %}
+              
+            </div>
+          </article>
+        {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+    <!--================== END OF PORTFOLIO =================-->
+
+
+
+    <section id="contact">
+      <div class="container contact__container">
+        <div class="contact__left">
+          <h1 style="color: #fff;">Let's Talk</h1>
+          <p>
+            Thank you for taking the time to review my portfolio.
+            I am confident that my skills and experience in software development make me a valuable asset to any team. 
+            I would love the opportunity to discuss how I can contribute to your organization. 
+            Please don't hesitate to contact me if you have any further questions or if you're interested in working together. <br> <br>
+            Thank you for your time.
+          </p>
+          <ul class="contact__socials" >
+            <li>
+            <a href="https://github.com/fibonacci555" target="_blank"><i class="uil uil-github"></i></a>
+            </li>
+            <li>
+              <a href="https://instagram.com/joao.dfb3" target="_blank"><i class="uil uil-instagram"></i></a>
+            </li>
+
+            <li>
+            
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-branco-284567200/" target="_blank"><i class="uil uil-linkedin"></i></a>
+            </li>
+            
+            
+          </ul>
+        </div>
+
+        <form id="formId" method="POST">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="body"
+            rows="6"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn" id="submit-btn">
+            Send <i class="uil uil-arrow-right"></i>
+          </button>
+          <p id="Success"></p>
+        </form>
+      </div>
+    </section>
+
+   
+
+    
+    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'testimonials.js' %}"></script>
+
+    <script>
+    // get the form element
+    var form = document.getElementById("formId");
+    // add a submit event listener to the form
+    form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(form);
+    //submit the form data via AJAX
+    $.ajax({
+      type: "POST",
+      url: "", // replace with the correct URL to handle the form submission
+      data: formData,
+      processData: false,
+      contentType: false,
+      headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+      },
+      success: function(response) {
+        
+        document.getElementById("Success").innerHTML = "Thank you, your submission has been received!";
+      },
+      error: function(error) {
+        
+        document.getElementById("Success").innerHTML = "Form submission failed. Please check your inputs and try again";
+      }
+    });
+  });
+
+
+
+
+
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,118 @@
+#skills{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#skills h1{
+    text-align: center;
+}
+
+#skills h3{
+    margin: 5px;
+}
+
+.skill{
+    width: 800px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar{
+    background: rgb(30,30,30);
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgb(144, 181, 230)0%, rgb(228, 14, 121)100%);
+}
+
+.Python{
+    width: 80%;
+    animation: Python 3s;
+}
+@keyframes Python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.Java{
+    width: 73%;
+    animation: Java 3s;
+}
+@keyframes Java{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 73%;
+    }
+}
+
+.C{
+    width: 65%;
+    animation: C 3s;
+}
+@keyframes C{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 65%;
+    }
+}
+
+.Cplus{
+    width: 55%;
+    animation: Cplus 3s;
+}
+@keyframes Cplus{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 55%;
+    }
+}
+
+.WebDev{
+    width: 76%;
+    animation: WebDev 3s;
+}
+@keyframes WebDev{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 76%;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .skill{
+        width: auto;
+    }
+}
+
